@@ -1,0 +1,147 @@
+/* Start responsive */
+@media screen and (max-width: 568px) {
+  body {
+   background-color: lightgreen !important;
+  }
+  a {
+   font-size: 18px !important;
+   font-style: italic !important;
+  }
+  .container2 {
+   width: 75% !important;
+  }
+  .show {
+   display: inline-block !important;
+  }
+  .hide {
+   display: none !important;
+  }
+  .banner {
+   width:100% !important;
+  }
+}
+/* /Responsive */
+
+body {
+  background-color: lightblue;
+  font-family: verdana;
+} 
+
+a {
+  font-family: verdana;
+  color: green;
+  background-color: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+} 
+
+a:hover {
+  color: #003555;
+  background-color: none;
+}
+
+/* Main container */
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+  height: 85%;
+  background-color: white;
+}
+
+/* Start scrolling banner */
+.banner {
+  width:85%;
+  margin: 0 auto;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  background: linear-gradient(to left, #EA4C46, #F1959B);
+  border-radius: 10px;
+}
+
+/* Scrolling banner scrolling text */
+.marquee-container {
+  width: 100%;
+  color: white;
+  overflow: hidden; /* Hide the content that moves outside the container */
+  white-space: nowrap; /* Keep the text on a single line */
+}
+
+/* Scrolling banner actual text element */
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%; /* Start the text off-screen to the right */
+  animation: scroll-left 10s linear infinite; /* Define the animation */
+  font-size: 35px;
+  font-weight: 800;
+  font-style: none;
+}
+
+/* Scrolling banner defined animation keyframes */
+@keyframes scroll-left {
+ from {
+  transform: translateX(0%); /* Start at the original position */
+  }
+ to {
+  transform: translateX(-100%); /* Move the text completely off-screen to the left */
+  }
+}
+/* /Scrolling banner */
+
+.button1 {
+  width:25%;
+  margin: 0 auto;
+  border-color: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 60px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.button1:hover {
+  background-color: lightblue;
+  border-color: darkblue;
+}
+
+.button2 {
+  width:25%;
+  margin: 0 auto;
+  border-color: lightsalmon;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 60px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.button2:hover {
+  background-color: navy;
+  border-color: darkblue;
+}
+
+/* Start blink */
+@keyframes blinker {
+ 0% {
+   opacity: 1;
+ }
+  50% {
+   opacity: 0;
+ }
+  100% {
+   opacity: 1;
+ }
+}
+.blink-me {
+  animation: blinker 2s linear infinite;
+}
+/* /Blink */
