@@ -1,0 +1,278 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>GDR Dev</title>
+
+<script>
+function showContent() {
+  var contentDiv = document.getElementById("myContent");
+  if (contentDiv.style.display === "none") {
+    contentDiv.style.display = "block"
+  } else {
+    contentDiv.style.display = "none"
+  }
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body,
+html {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.aside-section {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.aside-left {
+  display: none;
+  width: 35%;
+  left: 0;
+  background-color: #ff5964;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.aside-right {
+  width: 100%;
+  right: 0;
+  background-color: #38618c;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.aside-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 150px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.aside-content {
+  margin-top: 150px;
+  padding: 0 40px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.aside-list li {
+  margin-bottom: 20px;
+}
+
+.aside-anchor::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #ff5964;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.aside-anchor::before {
+  border-radius: 3px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  left: 0;
+  height: 3px;
+  z-index: 1;
+  width: 50%;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.aside-anchor:hover:before {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.aside-anchor {
+  padding-bottom: 7px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ aside .aside-left {
+  transform: translateY(0%);
+}
+
+input[type="checkbox"]:checked ~ aside .aside-right {
+  transform: translateX(0%);
+}
+
+input[type="checkbox"]:checked ~ label .bar {
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  -moz-transform: translateY(0px) rotateZ(45deg);
+  -ms-transform: translateY(0px) rotateZ(45deg);
+  -o-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+input[type="checkbox"]:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+label {
+  top: 10px;
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  z-index: 3;
+  position: fixed;
+}
+
+.bar {
+  display: block;
+  background-color: #38618c;
+  width: 40px; /* 30 */
+  height: 7px; /* 3 */
+  border-radius: 5px;
+  margin: 5px auto;
+  transition: background-color 0.4s ease-in, transform 0.4s ease-in,
+    width 0.4s ease-in;
+}
+
+h1 {
+  margin: 0;
+  position: relative;
+  top: 40%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 30px;
+}
+
+h1 span {
+  font-size: 20px;
+  display: block;
+}
+
+p {
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  background-image: none;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 7px;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  padding: 7px 50px;
+  border: 2px solid white;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 36px;
+  }
+  .aside-left {
+    display: block;
+  }
+  .aside-right {
+    width: 65%;
+  }
+}
+</style>
+<script defer="" data-domain="gregdodge.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script></head>
+
+<body>
+
+<main>
+  <h1>
+    GDR New Site Test ...
+    <span style="padding-top:20px;"> css only </span>
+    <span style="padding-top:20px"> click menu above for some "interesting" things </span>
+  </h1>
+  <input type="checkbox" id="myInput">
+  <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+  <aside>
+    <div class="aside-section aside-left">
+      <div class="aside-content">
+        <p> Check out some pages &gt; </p>
+        <a href="/button.html" target="iframe"><button class="button"> Or, click here for a big button </button></a>
+      </div>
+    </div>
+    <div class="aside-section aside-right">
+      <ul class="aside-list">
+        <li><a href="https://images.ctfassets.net/pc40tpn1u6ef/3A8AOys7Z2vv6dqUM486C0/77aa8f2d89b518a8ce6ea4dfca3e254d/Physics_canva.jpg?w=900" target="iframe" class="aside-anchor">Physics</a></li>
+        <li><a href="https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/15414153/shutterstock_172355312.0.0.1435352379.jpg?quality=90&amp;strip=all&amp;crop=0,18.409318647355,100,63.181362705289&amp;w=900" target="iframe" class="aside-anchor" "="">Science</a></li>
+        <li><a href="https://usagif.com/wp-content/uploads/gify/fireworks-10-usagif.gif" target="iframe" class="aside-anchor">Ideas</a></li>
+        <li><a href="https://news.harvard.edu/wp-content/uploads/2022/11/iStock-mathproblems.jpg?w=900" target="iframe" class="aside-anchor">Math</a></li>
+      </ul>
+      
+      <div align="left" style="padding:20px 50px;">
+       <iframe name="iframe" scrolling="no" style="width:100%;height:475px;border:0px;padding-bottom:25px;"></iframe>
+      </div>
+
+    </div>
+  </aside>
+
+</main>
+</body></html>
