@@ -1,1 +1,223 @@
-GREG TEST
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GDR Dev</title>
+
+<link rel="stylesheet" href="https://gregdodge.tiiny.site/styles.css"><meta property="og:url" content="https://gregdodge.tiiny.site/" data-id="th-modified"><meta property="og:type" content="website" data-id="th-modified">
+        
+ <script defer="" data-domain="gregdodge.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script>
+ 
+ </head>
+
+ <!-- wtf very bad --> 
+
+<body>
+
+<!-- Scrolling bar -->
+
+<style>
+  /* 1. Position the progress bar fixed at the top of the viewport */
+.scroll-progress-bar {
+    position: fixed; /* Stays in the same place in the viewport as you scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px; /* Adjust the height as desired */
+    background: linear-gradient(to right, #007bff, #0056b3); /* Add some color/style */
+    transform-origin: left; /* Ensure the bar expands from the left */
+    /* Set initial state for browsers without animation-timeline support */
+    transform: scaleX(0); 
+}
+
+/* 2. Define the animation keyframes */
+@keyframes scaleProgress {
+    from {
+        transform: scaleX(0); /* Start with a width of 0 */
+    }
+    to {
+        transform: scaleX(1); /* End with a width of 100% */
+    }
+}
+
+/* 3. Link the animation to the document scroll */
+.scroll-progress-bar {
+    animation: scaleProgress linear forwards; /* Apply animation linearly */
+    animation-timeline: scroll(); /* Link animation to the root scroller */
+}
+
+</style>
+
+<div class="scroll-progress-bar"></div>
+
+<!-- Scrolling bar -->
+
+<div class="container">
+
+    <div class="banner">
+        <div class="marquee-container">
+            <p class="marquee-text">
+                jscript{} indx#._/main(t,_,a) \char *z elgato {return!0 &lt; t?t&lt;3?  main(-79,gato,-13,a+main(-87,1-_,main/(-86,0,a+1)+a)) <span style="font-size:30px;"> (!) </span> :1,t&lt;/fck;_?main(t+1,_,a):3 /end\
+            </p>
+        </div>
+    </div>
+
+<!-- Grid CSS -->
+
+<style>
+ .itemcontainer {
+    margin: auto;
+    width: 50%;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding-top: 40px;
+}
+ .item {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 25px;
+ }
+ .item:hover {
+    background-color: orange;
+    border: 1px solid green;
+    color: white;
+ }   
+</style>
+
+<!-- /CSS Grid -->
+
+<style>
+ .overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s, visibility 0.2s; /* Smooth transition */
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 50%;
+  text-align: center;
+}
+.close-button {
+  margin-top: 10px;
+  display: inline-block;
+  color: #aaa;
+  text-decoration: none;
+}
+</style>
+
+<!-- Pop up things -->
+
+<div id="popup-box1" class="overlay">
+  <div class="popup">
+    <h2>Pats</h2>
+    <p><img src="https://upload.wikimedia.org/wikipedia/sco/thumb/b/b9/New_England_Patriots_logo.svg/1200px-New_England_Patriots_logo.svg.png" style="width:35%;"></p>
+    <a href="#" class="close-button">close</a>
+  </div>
+</div>
+
+<div id="popup-box2" class="overlay">
+  <div class="popup" style="max-width:600px !important;">
+    <h2>Fight</h2>
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Revolutionary_Armed_Forces_of_Colombia_%28FARC%29_insurgents.GIF" style="width:100%;"></p>
+    <a href="#" class="close-button">close</a>
+  </div>
+</div>
+
+<div id="popup-box3" class="overlay">
+  <div class="popup">
+    <h2>Nope</h2>
+    <p><img src="https://64.media.tumblr.com/f3c875aa7441a1bef81d8a1836eaf532/tumblr_pbefk74z951qbivm4o1_400.gif" style="width:100%;"></p>
+    <a href="#" class="close-button">close</a>
+  </div>
+</div>
+
+<div id="popup-box4" class="overlay">
+  <div class="popup">
+    <h2>Rudy</h2>
+    <p><img src="https://66.media.tumblr.com/f034baf6a1ea8a5e4be51be32d2626bb/8f33a9abfc35bcab-15/s540x810/9ab20f244824d072efefe893e0cf9965d758f462.gif" style="width:100%;"></p>
+    <a href="#" class="close-button">close</a>
+  </div>
+</div>
+
+<!-- /Pop up things -->
+
+<div style="margin-top:35px;">No Javascript...</div>
+
+    <div class="itemcontainer">
+      <a href="#popup-box1"><div class="item">1</div></a>
+      <a href="#popup-box2"><div class="item">2</div></a>
+      <a href="#popup-box3"><div class="item">3</div></a>
+      <a href="#popup-box4"><div class="item">4</div></a>
+    </div>
+    
+<!-- Hover buttons -->
+
+<style>
+/* 1. Base styles for the button */
+.bouncing-btn {
+  display: inline-block; /* Essential for transform to work correctly on all elements */
+  padding: 15px 30px;
+  margin: 35px 15px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  font-family: verdana;
+  letter-spacing: 1.3px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth transition when the hover starts/stops */
+}
+/* 2. Apply the animation on hover */
+.bouncing-btn:hover {
+  animation: bounce 1s infinite; /* Animation name, duration, and infinite loop */
+}
+/* 3. Define the keyframe animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position (at rest) */
+  }
+  50% {
+    transform: translateY(-10px); /* Mid-point position (the "bounce" up) */
+  }
+}
+</style>
+
+
+<a href="http://www.hover.com"><button class="bouncing-btn">Hover</button></a>
+<a href="http://www.hover.com"><button class="bouncing-btn">Hover</button></a>
+<a href="http://www.hover.com"><button class="bouncing-btn">Hover</button></a>
+
+<!-- /Hover buttons -->
+
+    <div class="button1" onclick="location.href='2.html'" style="cursor: pointer">
+       <p><a href="2.html">click</a></p>
+    </div>
+
+    <div class="button2" onclick="location.href='testing.html'" style="cursor: pointer;">
+        <p><a href="testing.html">click</a></p>
+    </div>
+
+    <div style="bottom:20px;">
+        <p class="blink-me" style="letter-spacing:2.5px"><a href="https://gregdodge.tumblr.com/">click</a></p>
+    </div>
+
+</div>
+
+</body></html>
