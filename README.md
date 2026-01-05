@@ -1,1 +1,1 @@
-CSS dev pratctice and tests
+CSS dev practice and tests
