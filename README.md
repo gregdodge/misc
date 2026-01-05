@@ -1,1 +1,1 @@
-CSS dev practice and tests
+CSS dev examples and practice
