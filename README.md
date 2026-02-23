@@ -1,1 +1,1 @@
-CSS examples and practice
+Misc code examples and tests
